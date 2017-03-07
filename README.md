@@ -1,5 +1,7 @@
 # travis-pls [![Build Status][svg-travis]][travis]
 
+![travis-pls](https://cdn.meme.am/cache/instances/folder773/500x/75981773.jpg)
+
 A little script for keeping very long running jobs online in Travis CI.
 
 ## Use-Case
@@ -32,6 +34,7 @@ and error, sending out the following message (by default) every nine minutes to 
 
 It works. Your builds will now stream your output back to you and will never, ever time out.
 
+ [img-dolan]: https://cdn.meme.am/cache/instances/folder773/500x/75981773.jpg
  [travis]: https://travis-ci.org/naftulikay/travis-pls
  [packer]: https://packer.io/
  [problem]: https://docs.travis-ci.com/user/common-build-problems/#My-builds-are-timing-out
