@@ -1,5 +1,6 @@
 /ansible/galaxy_roles/
 /bin/
+/build/
 /develop-eggs/
 /dist/
 /eggs/
