@@ -1,0 +1,24 @@
+---
+language: python
+python:
+  - '3.4'
+  - '3.5'
+
+cache:
+  pip: true
+  directories:
+  - eggs/
+
+install:
+- python3 bootstrap.py
+- bin/buildout
+
+script: bin/test
+
+deploy:
+  provider: pypi
+  user: naftulikay
+  password:
+    secure: "eBHkClf29oS06kPHFhHSEq8k2sWytz5PD1QrYLYFLkOHvfg9Ee+v5kiNx/gmhRnd8vyCSftclM6AsJHJbMff+l74TBmg7xlPPOIoz3oc6tlmXjJ+9wxrVJCOdkuNAf6tUynXUF7Fex5/ulq/kVZIR5sDO1+d9cNtpVtKwe3q2gZcVZ4z8lk9Bh5jpT3h4YS85Jilxi2dCAbZowOtQ1WS5GzIqXXVwcxjcwElrxcnttXjqJsKqekYb+rgy473ZzGEDScZNpZzz2ptbmtFn9MLyDSBRMQxUe4R6dQpTxaa62DWUrLhSVfEGLI/IoNFhM3iozes/nlsVHoGWu9kSjsf13ikDCL/AXJmQwvzvYGonCp+y3UG6ubQLLHTsyX7eT8rhkEeJV/6IVrEsYCOfxZAuAtvuPvOM7kUqPR/yzTrTgIaGJJlBif4+XFe51Qtjcq6aSEml0IyK6UBWxjS/mr3M4gwXBx5D4HdcDbOpV18Z/pxAnaOInSg7DWZUC1cItnZNa52Af/Ee6q8JIqNb+4VXj5WIhS8aqmHCFVkVj9VeBzIKu2gYRe61DrpNc7XjpwcZgg1tWJ4Yc6N64xs+UgXpe5F/5OvhGx/8gDMHn3oFDEk253KW2R8QES5k/U1Aqq9lZdMMCg5CAiq0DKoHthJKZIh2TTHZyHhfeUj0DrmsLY="
+  on:
+    tags: true

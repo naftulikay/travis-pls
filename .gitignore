@@ -1,0 +1,15 @@
+/ansible/galaxy_roles/
+/bin/
+/develop-eggs/
+/dist/
+/eggs/
+/parts/
+/src/travispls.egg-info
+
+/.eggs/
+/.installed.cfg
+/.vagrant
+
+__pycache__
+*.pyc
+*.pyo
