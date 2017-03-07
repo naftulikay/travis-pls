@@ -4,6 +4,11 @@ python:
   - '3.4'
   - '3.5'
 
+matrix:
+  allow_failures:
+    # ipython fails to install on python 3.4
+    - python: '3.4'
+
 cache:
   pip: true
   directories:
