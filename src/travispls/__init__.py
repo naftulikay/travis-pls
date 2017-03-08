@@ -61,7 +61,7 @@ def disturb():
     """Disturb standard error."""
     sys.stderr.write("{prefix}{message}{postfix}\n".format(
         prefix=AnsiColors.BOLD_YELLOW if AnsiColors.enabled() else "",
-        message="🖕 travis pls 🖕",
+        message="travis pls",
         postfix=AnsiColors.CLEAR if AnsiColors.enabled() else ""
     ))
 
