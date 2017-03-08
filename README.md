@@ -30,7 +30,7 @@ Here are a few problems with `travis_wait`:
 A janky Python script which executes any command and arguments passed to it, sending output directly to standard output
 and error, sending out the following message (by default) every nine minutes to rustle Travis' jimmies:
 
-> 🖕 travis pls 🖕
+> travis pls
 
 It works. Your builds will now stream your output back to you and will never, ever time out.
 
