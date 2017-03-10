@@ -1,4 +1,3 @@
----
 language: python
 python:
   - '3.4'
@@ -6,7 +5,6 @@ python:
 
 matrix:
   allow_failures:
-    # ipython fails to install on python 3.4
     - python: '3.4'
 
 cache:
@@ -15,8 +13,8 @@ cache:
   - eggs/
 
 install:
-- python3 bootstrap.py
-- bin/buildout
+  - python3 bootstrap.py
+  - bin/buildout
 
 script: bin/test
 
@@ -24,6 +22,8 @@ deploy:
   provider: pypi
   user: naftulikay
   password:
-    secure: "eBHkClf29oS06kPHFhHSEq8k2sWytz5PD1QrYLYFLkOHvfg9Ee+v5kiNx/gmhRnd8vyCSftclM6AsJHJbMff+l74TBmg7xlPPOIoz3oc6tlmXjJ+9wxrVJCOdkuNAf6tUynXUF7Fex5/ulq/kVZIR5sDO1+d9cNtpVtKwe3q2gZcVZ4z8lk9Bh5jpT3h4YS85Jilxi2dCAbZowOtQ1WS5GzIqXXVwcxjcwElrxcnttXjqJsKqekYb+rgy473ZzGEDScZNpZzz2ptbmtFn9MLyDSBRMQxUe4R6dQpTxaa62DWUrLhSVfEGLI/IoNFhM3iozes/nlsVHoGWu9kSjsf13ikDCL/AXJmQwvzvYGonCp+y3UG6ubQLLHTsyX7eT8rhkEeJV/6IVrEsYCOfxZAuAtvuPvOM7kUqPR/yzTrTgIaGJJlBif4+XFe51Qtjcq6aSEml0IyK6UBWxjS/mr3M4gwXBx5D4HdcDbOpV18Z/pxAnaOInSg7DWZUC1cItnZNa52Af/Ee6q8JIqNb+4VXj5WIhS8aqmHCFVkVj9VeBzIKu2gYRe61DrpNc7XjpwcZgg1tWJ4Yc6N64xs+UgXpe5F/5OvhGx/8gDMHn3oFDEk253KW2R8QES5k/U1Aqq9lZdMMCg5CAiq0DKoHthJKZIh2TTHZyHhfeUj0DrmsLY="
+    secure: s9o/yHWWrt71cIrzRCHzW5MFZJVrJr1+jjcLUmnw67XezekQLyPtkZtpvWuLbUimQn3bFvjavepJr1zZEIELJ5DnL7Hy2QRT9PWU+CdkPnDbu3biwKjxbs+P2cjnftqKO9xABS+Dus/7DTUmF8ws2fQ8RyLrgQBT+L6OBPt5gQii0N2zQLtqsipyUxVlr7zmBPgLNSrBOvE74wnRKF9Pl2KmspErWk1ixRdr79Hfna1o0rvnz0fzg5jY/2xQ+2l1w90R6cJQ3PVHEGCB+Te657PBs4c1xdX3QDCdXosiQoweZm5VMvfhQmnHm9v0X+9q4NvKY5PuBZNWtow/WL6DCi/Qw3M8mSZ+Bx+8T5+DuCHIhNjuss6Rde50d4RPEhaU4Eew4FKamRRrfuizKejrpyRvqOO+NKrNLjxp/E2K5lAtzxT5Cia3B6TEJs1U/JWEbUtsVNICBpwrZnQWDrJwqNGiRsgR2lIOFe8KSF2GKmGVfOFlcXojc0qTLshCJJ/7QYr0GahutAkqZ3BpIvaR+kf88m0ye+krxARBmrgqkbKIo1LbEa7AcLi3LvT2BCvB3nogdeljaVP3tqE7MxLLMAV/kTCEFUU6cli4LpZSoEgSK1VQFUHI/Hw4OxW3lHgBSgcyy+A57lAO/oM2MEt5zJHfICYP02JbgmF9DJzFuto=
   on:
     tags: true
+    distributions: sdist bdist_wheel bdist_egg
+    repo: naftulikay/travis-pls
