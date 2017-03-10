@@ -32,27 +32,32 @@ and error, sending out the following message (by default) every nine minutes to 
 
 > travis pls
 
-It works. Your builds will now stream your output back to you and will never, ever time out.
+It works. Your builds will now stream your output back to you and will only time out after an hour. If you _truly_ need
+something that never ever times out, the `-m`/`--max-timeout` flag can be set to `0`, which will cause your build to
+last forever. Please don't use this unless you have a paid Travis CI account.
 
 ## Usage
 
-As of right now, `travis-pls` only accepts one command-line flag, which allows you to specify the interval at which to
-disturb output. For instance, to disturb output every sixty seconds, invocation would look like this:
-
 ```
-$ travis-pls -i 60 sleep 120
-travis pls
+usage: travis-pls [-h] [-i INTERVAL] [-m MAX_TIMEOUT] command ...
+
+Periodically disturbs Travis to allow long-running builds with stalled output.
+
+positional arguments:
+  command               The command to run.
+  args                  Arguments for the command.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INTERVAL, --interval INTERVAL
+                        Disturbance interval.
+  -m MAX_TIMEOUT, --max-timeout MAX_TIMEOUT
+                        The maximum allowed run time in order to be a good
+                        internet citizen.
 ```
 
-The first argument to `travis-pls` should be the command you're looking to run, and all further arguments will be
-passed as arguments to that first command:
-
-```
-$ travis-pls echo a b c d e f g
-a b c d e f g
-```
-
-
+By default, `travis-pls` will time out after one hour of execution, and will interrupt every 9 minutes to keep the
+build alive.
 
  [img-dolan]: https://cdn.meme.am/cache/instances/folder773/500x/75981773.jpg
  [travis]: https://travis-ci.org/naftulikay/travis-pls
