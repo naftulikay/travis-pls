@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "travispls",
-    version = "1.0.1",
+    version = "1.0.2",
     packages = find_packages('src'),
     package_dir = { '': 'src'},
     author = "Naftuli Kay",
