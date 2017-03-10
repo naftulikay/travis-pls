@@ -34,6 +34,26 @@ and error, sending out the following message (by default) every nine minutes to 
 
 It works. Your builds will now stream your output back to you and will never, ever time out.
 
+## Usage
+
+As of right now, `travis-pls` only accepts one command-line flag, which allows you to specify the interval at which to
+disturb output. For instance, to disturb output every sixty seconds, invocation would look like this:
+
+```
+$ travis-pls -i 60 sleep 120
+travis pls
+```
+
+The first argument to `travis-pls` should be the command you're looking to run, and all further arguments will be
+passed as arguments to that first command:
+
+```
+$ travis-pls echo a b c d e f g
+a b c d e f g
+```
+
+
+
  [img-dolan]: https://cdn.meme.am/cache/instances/folder773/500x/75981773.jpg
  [travis]: https://travis-ci.org/naftulikay/travis-pls
  [packer]: https://packer.io/
