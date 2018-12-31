@@ -1,6 +1,6 @@
 # travis-pls [![Build Status][svg-travis]][travis]
 
-![travis-pls](https://cdn.meme.am/cache/instances/folder773/500x/75981773.jpg)
+![travis-pls](./site/img/travis-pls.jpg)
 
 A little script for keeping very long running jobs online in Travis CI.
 
@@ -59,7 +59,30 @@ optional arguments:
 By default, `travis-pls` will time out after one hour of execution, and will interrupt every 9 minutes to keep the
 build alive.
 
- [img-dolan]: https://cdn.meme.am/cache/instances/folder773/500x/75981773.jpg
+## Installation
+
+Installation from GitHub is recommended, as the author's personal experience is that PyPI has been historically
+unreliable, suffering production incidents as a result.
+
+**From GitHub:**
+
+```
+pip install git+https://github.com/naftulikay/travis-pls
+```
+
+**From PyPI:**
+
+```
+pip install travispls
+```
+
+## License
+
+Licensed at your discretion under either:
+
+ - [MIT License](./LICENSE-MIT)
+ - [Apache License, Version 2.0](./LICENSE-APACHE)
+
  [travis]: https://travis-ci.org/naftulikay/travis-pls
  [packer]: https://packer.io/
  [problem]: https://docs.travis-ci.com/user/common-build-problems/#My-builds-are-timing-out
