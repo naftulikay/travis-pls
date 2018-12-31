@@ -36,6 +36,20 @@ It works. Your builds will now stream your output back to you and will only time
 something that never ever times out, the `-m`/`--max-timeout` flag can be set to `0`, which will cause your build to
 last forever. Please don't use this unless you have a paid Travis CI account.
 
+
+## Installation
+
+From git (recommended)
+```bash
+pip install git+https://github.com/naftulikay/travis-pls
+```
+
+From PyPi
+
+```
+pip install travispls
+```
+
 ## Usage
 
 ```
