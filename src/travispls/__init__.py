@@ -38,6 +38,8 @@ def main():
 
     if args.max_timeout > 0:
         end_of_line = datetime.utcnow() + timedelta(seconds=args.max_timeout)
+    else:
+        end_of_line = None
 
     # start the process
     p = subprocess.Popen([args.command] + args.args)
